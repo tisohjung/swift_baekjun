@@ -7,4 +7,4 @@
 
 import Foundation
 
-main2751()
+main()
