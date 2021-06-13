@@ -5,10 +5,10 @@
 //  Created by minho on 2021/05/16.
 // https://www.acmicpc.net/problem/2178
 
-
 import Foundation
 
-func main() {
+// func main() {
+func main2178() {
     class Point {
         let x: Int
         let y: Int
@@ -17,7 +17,6 @@ func main() {
             self.y = y
         }
     }
-//func main2178() {
     let line: [Int] = readLine()!.split(separator: " ").map({ Int($0)! })
     let n: Int = line[0]
     let m: Int = line[1]
@@ -55,8 +54,8 @@ func main() {
                 let nowDx = node.x - dx[i]
                 let nowDy = node.y - dy[i]
 
-                if nowDx < 0 || nowDx > n - 1 ||
-                    nowDy < 0 || nowDy > m - 1 {
+                if nowDx < 0 || nowDx >= n ||
+                    nowDy < 0 || nowDy >= m {
                     // node outside the maze
                     continue
                 } else {
@@ -71,5 +70,5 @@ func main() {
             }
         }
     }
-    print(distance[n-1][m-1])
+    print(distance[n - 1][m - 1])
 }
